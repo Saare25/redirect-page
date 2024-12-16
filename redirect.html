@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Replace these with your actual links
+      var iosUrl = "https://apps.apple.com/ua/app/456-survival-challenging-games/id6470453465";
+      var androidUrl = "https://play.google.com/store/apps/details?id=com.abi.banana.survival.master&hl=en";
+
+      var userAgent = navigator.userAgent.toLowerCase();
+      var isIOS = /iphone|ipad|ipod/.test(userAgent);
+      var isAndroid = /android/.test(userAgent);
+
+      if (isIOS) {
+        window.location.href = iosUrl;
+      } else if (isAndroid) {
+        window.location.href = androidUrl;
+      } else {
+        // Optional fallback
+        // window.location.href = "https://your-website.com/fallback";
+      }
+    });
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
